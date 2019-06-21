@@ -1,0 +1,21 @@
+<div ng-show="showTouristsList">
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Deparature</th>
+      <th>Arrival</th>
+      <th>Number of seats</th>
+      <th>Price</th>
+      
+    </tr>
+    <tr *ngFor='let flight of flights'>
+        <td>{{flight.id}}</td>
+        <td>{{flight.deparature}}</td>
+        <td>{{flight.arrival}}</td>
+        <td>{{flight.numberOfSeats}}</td>
+        <td>{{flight.price}}</td>
+        <button>Add tourist to flight</button>
+        
+    </tr>
+  </table>
+</div>

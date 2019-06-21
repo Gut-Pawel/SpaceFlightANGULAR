@@ -1,0 +1,24 @@
+
+<div ng-show="showTouristsList">
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Gender</th>
+      <th>Country</th>
+      <th>Remarks</th>
+      <th>dateOfBirth</th>
+    </tr>
+    <tr *ngFor='let tourist of tourists'>
+        <td>{{tourist.id}}</td>
+        <td>{{tourist.firstName}}</td>
+        <td>{{tourist.lastName}}</td>
+        <td>{{tourist.gender}}</td>
+        <td>{{tourist.country}}</td>
+        <td>{{tourist.remarks}}</td>
+        <td>{{tourist.dateOfBirth}}</td>
+    </tr>
+  </table>
+</div>
+
