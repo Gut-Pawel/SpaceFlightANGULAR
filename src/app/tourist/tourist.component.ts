@@ -1,7 +1,8 @@
 import { Component, OnInit, enableProdMode } from '@angular/core';
 import { Tourists } from '../model/tourist.model';
 import { DataService } from '../data.service';
-import { Observable } from 'rxjs';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 
 enableProdMode();
 
@@ -19,9 +20,12 @@ export class TouristComponent implements OnInit {
 
   listTourists: Tourists[];
 
+  messageForm: FormGroup;
+  //https://www.youtube.com/watch?v=5wtnKulcquA 38:00
+
   ngOnInit() {
     this.data.getTourist().subscribe(data => {
-      this.tourists = data
+      this.tourists = data;
 
     });
   }

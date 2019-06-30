@@ -17,4 +17,8 @@ export class DataService {
     return this.http.get('http://localhost:8080/api/flights');
   }
 
+  getListOfTouristToFlight(id: number): Observable<any> {
+    return this.http.get('http://localhost:8080/api/touristsListOfFlights/flight_id/' + id);
+  }
+
 }
